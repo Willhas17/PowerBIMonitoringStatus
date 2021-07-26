@@ -2,7 +2,7 @@
 
 ## About
 
-A code for monitoring the status off all reports in your workspace
+A code for monitoring the status off all reports in your workspaces
 - Dinamic monitoring of all reports
 - Easy configure
 
