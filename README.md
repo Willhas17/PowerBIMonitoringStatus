@@ -1,8 +1,15 @@
-# PowerBIMonitoringStatus
+# PowerBI Monitoring Status
+
+## About
 
 A code for monitoring the staus off all reports in your workspace
 - Dinamic monitoring of all reports
 - Easy configure
+
+## How it works
+
+The program is refresh every 5 minutes and check if the reports have next scheduled hour, if the report has next scheduled hour, it's okay and the status color is "green", else if the status color is "red".
+
 
 ## Installation
 
