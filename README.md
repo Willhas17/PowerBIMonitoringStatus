@@ -13,9 +13,9 @@ Install the dependencies.
  - [Chrome Driver](https://chromedriver.chromium.org/downloads)
  - [Azure Theme](https://github.com/rdbende/Azure-ttk-theme)
 
-## Development
 
-Want to contribute? Great!
+
+## Tips
 
 #### Building in an exe file
 
@@ -36,6 +36,9 @@ pyinstaller --noconfirm --onefile --noconsole "'directory'/PowerBI.py"
 ```sh
 pyinstaller --noconfirm --noconsole "'directory'/PowerBI.py"
 ```
+## Development
+
+Want to contribute? Great!
 
 ## License
 
