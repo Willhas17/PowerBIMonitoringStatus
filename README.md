@@ -13,7 +13,13 @@ Install the dependencies.
  - [Chrome Driver](https://chromedriver.chromium.org/downloads)
  - [Azure Theme](https://github.com/rdbende/Azure-ttk-theme)
 
+```sh
+pip install tkinter
+```
 
+```sh
+pip install selenium
+```
 
 ## Tips
 
