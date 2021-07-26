@@ -5,8 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
-#Commando for transform in an exe
-#pyinstaller --noconfirm --onefile --noconsole "C:/Users/willian.silva/projeo/PowerBI.py"
+#Command for transform in an exe
+#pyinstaller --noconfirm --onefile --noconsole "'directory'/PowerBI.py"
 
 root = tk.Tk()
 root.title('POWER BI - STATUS')
@@ -27,8 +27,6 @@ root.resizable(True, True)
 # Import the tcl file
 root.tk.call("source", "azure-dark.tcl")
 style = ttk.Style(root)
-# # print(style.theme_names())
-# # print(style.theme_use())
 style.theme_use("azure-dark")
 ##
 
@@ -37,7 +35,7 @@ canvas = []
 canvascolor = []
 
 def Atualizar_Rela():
-    # Input the main url for login
+    # The main url for login
     url = r"https://app.powerbi.com/?tenant=&UPN="
     option = Options()
     option.add_argument("--incognito")
@@ -125,7 +123,7 @@ def Atualizar_Rela():
                     canvas[cont] = tk.Canvas(root, width=15, height=15,highlightbackground="black", borderwidth=1, highlightthickness=5, bg="white")
                     canvas[cont].grid(row=cont)
 
-                    # Set colors for actual state of the reports
+                    # Set colors for actual status of the reports
                     if k == 6:
                         lb2[cont2].configure(text=linhas[x].text)
                         canvascolor.append("yellow")
@@ -147,7 +145,7 @@ def Atualizar_Rela():
 
                 colunas.append(linhas)  
     except:
-        print('Delay ao executar')
+        print('Something went wrong')
         
 
     #
@@ -160,7 +158,7 @@ def task():
     now = time.strftime("%M")
     now2 = time.strftime("%S")
 
-    # Calling the function for each 5 minutes em 31 seconds
+    # Calling the function for each 5 minutes and 31 seconds
     if int(now) % 5 == 0 and int(now2) % 30 == 1:
         Atualizar_Rela()
 
