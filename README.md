@@ -8,7 +8,7 @@ A code for monitoring the status of all reports in your workspaces
 
 ## How it works
 
-The program is refresh every 5 minutes and check if the reports have next scheduled hour, if the report has next scheduled hour, it's okay and the status color is "green", else if the status color is "red".
+The program is refresh every 5 minutes and check if the reports has next scheduled hour, if the report has next scheduled hour, it's okay and the status color is "green", else if the status color is "red".
 
 
 ## Installation
