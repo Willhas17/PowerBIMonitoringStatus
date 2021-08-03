@@ -39,6 +39,7 @@ def Atualizar_Rela():
     url = r"https://app.powerbi.com/?tenant=&UPN="
     option = Options()
     option.add_argument("--incognito")
+    option.add_experimental_option('excludeSwitches', ['enable-logging'])
     option.headless = True
 
     driver = webdriver.Chrome(options=option)
@@ -87,7 +88,7 @@ def Atualizar_Rela():
 
         # "workcount" count the workspaces quantity
         for p in range(int(len(workcount))):
-            pathtemp = '//*[@id="cdk-overlay-2"]/nav/nav-pane-workspaces/div[3]/virtual-scroll/div[2]/ul/li['+ str(p + 1) +']/workspace-button'  
+            pathtemp = '//*[@id="cdk-overlay-1"]/nav/nav-pane-workspaces/div[3]/virtual-scroll/div[2]/ul/li['+ str(p + 1) +']/workspace-button'  
             tempclick = driver.find_element_by_xpath(pathtemp)
             tempclick.click()
             work = driver.find_element_by_xpath('//*[@id="leftNavPane"]/section/nav/button')
@@ -151,6 +152,7 @@ def Atualizar_Rela():
     #
 
     driver.close()
+    driver.quit()
 
 Atualizar_Rela() # Calling the first loop
 
